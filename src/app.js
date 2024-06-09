@@ -37,7 +37,8 @@ import { authMiddleware } from "./middlewares/auth.js";
 import cookieParser from "cookie-parser";
 // Importación del manejador de errores:
 import errorHandler from "./middlewares/errors.js";
-
+// Importación de Logger:
+import { addLogger } from "./middlewares/logger.js";
 // Variables env:
 const { port } = configObject;
 
@@ -59,6 +60,8 @@ app.use(cookieParser());
 app.use(authMiddleware);
 // Manejo de errores:
 app.use(errorHandler);
+// Logger:
+app.use(addLogger);
 
 // HANDLEBARS:
 // Crea una instancia del motor de plantillas Handlebars:
