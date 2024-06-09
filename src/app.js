@@ -13,6 +13,8 @@ import { productsApiRouter } from "./routes/api/products.api.router.js";
 import { cartsApiRouter } from "./routes/api/carts.api.router.js";
 // Importación de las rutas del api de usuarios:
 import { usersApiRouter } from "./routes/api/users.api.router.js";
+// Importación de las rutas del api de logger:
+import { loggerApiRouter } from "./routes/api/logger.api.router.js";
 // Importación de las rutas de views:
 import viewsRouter from "./routes/views.router.js";
 // Importación de las rutas de mocking products:
@@ -88,6 +90,8 @@ app.use("/api/carts", cartsApiRouter);
 app.use("/api/users", usersApiRouter);
 // Endpoint de la ruta de api mocking products:
 app.use("/mockingproducts", mockingProductsApiRouter);
+// Endpoint de la ruta de api logger test:
+app.use("/api/loggertest", loggerApiRouter);
 // Endpoint de la ruta de views:
 app.use("/", viewsRouter);
 
