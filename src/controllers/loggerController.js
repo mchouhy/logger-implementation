@@ -1,4 +1,4 @@
-const loggerController = (request, response) => {
+export const loggerController = (request, response) => {
   request.logger.debug("Mensaje de Debug");
   request.logger.http("Mensaje de HTTP");
   request.logger.info("Mensaje de Info");
@@ -7,5 +7,3 @@ const loggerController = (request, response) => {
   request.logger.fatal("Mensaje de Error Fatal");
   response.send("Logs de error generados con éxito.");
 };
-
-export default loggerController;
